@@ -19,7 +19,6 @@ class _LandingScreenState extends State<LandingScreen> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final cs = theme.colorScheme;
 
     final pages = <Widget>[
       const ReserveStep1Screen(),
@@ -152,11 +151,6 @@ class _BottomBar extends StatelessWidget {
     );
   }
 
-  double _getIndicatorPosition() {
-    final screenWidth = ScreenUtil().screenWidth;
-    final itemWidth = (screenWidth - 32.w) / 4;
-    return currentIndex * itemWidth;
-  }
 
   Widget _navItem({
     required BuildContext context,

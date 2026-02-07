@@ -51,7 +51,7 @@ class ProfileScreen extends StatelessWidget {
                   // ✅ rang avatar + infos rapides
                   Row(
                     children: [
-                      _Avatar(),
+                      _Avatar(avatarUrl),
                       SizedBox(width: 12.w),
                       Expanded(
                         child: Column(
@@ -163,7 +163,7 @@ class _Avatar extends StatelessWidget {
   // plus tard: tu passeras ici avatarUrl (backend)
   final String? avatarUrl;
 
-  const _Avatar({this.avatarUrl});
+  const _Avatar(this.avatarUrl);
 
   @override
   Widget build(BuildContext context) {
@@ -197,6 +197,7 @@ class _Avatar extends StatelessWidget {
   }
 }
 
+// ignore: unused_element
 class _Initial extends StatelessWidget {
   final String initial;
   const _Initial({required this.initial});
